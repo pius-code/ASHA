@@ -1,4 +1,5 @@
 #include "mqtt_callback.h"
+#include <ArduinoJson.h>
 
 MqttMessage callback(char* topic,byte* payload, unsigned int length){
     String Message;
@@ -6,5 +7,15 @@ MqttMessage callback(char* topic,byte* payload, unsigned int length){
         Message += (char)payload[i];
     }
     Message.trim();
-    return {topic,Message};
+
+JsonDocument doc;
+DeserializationError error = deserializeJson(doc,Message);
+
+
+
+    return {
+        String(topic),
+        doc["pin"].as<int>(),
+        doc["command"].as<int>()
+    };
 }

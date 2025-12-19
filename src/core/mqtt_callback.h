@@ -5,7 +5,9 @@
 
 struct MqttMessage{
     String topic;
-    String payload;
+    int pin;
+    int command;
+
 };
 
 

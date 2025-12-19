@@ -3,31 +3,31 @@
 #include <PubSubClient.h>
 #include "core/mqtt_callback.h"
 #include "handler/Mqtt_handler.h"
-// #define LED_PIN 2 
-// #define YELLOW_LED 23 
+
 
 const char* ssid = "Tecno";
 const char* password = "voed5050";
 WiFiClient espClient;
-PubSubClient client(espClient);
+PubSubClient pubSubclient(espClient);
 
 
 void mqtt_callback_and_handle(char* topic, byte* payload, unsigned int length){
-    Serial.print("Message received on topic: ");
-    Serial.println(topic);
     MqttMessage message = callback(topic, payload, length);
+    Serial.println( message.topic );
+    Serial.println( message.pin );
+    Serial.println( message.command );
     handleResponse(message);
 }
 
 void reconnect() {
-  while (!client.connected()) {
+  while (!pubSubclient.connected()) {
     Serial.print("Attempting MQTT connection...");
-    if (client.connect("ESP32Client")) {
+    if (pubSubclient.connect("ESP32Client")) {
       Serial.println("connected");
-      client.subscribe("home/led");
+      pubSubclient.subscribe("home");
     } else {
       Serial.print("failed, rc=");
-      Serial.print(client.state());
+      Serial.print(pubSubclient.state());
       Serial.println(" try again in 5 seconds");
       delay(5000);
     }
@@ -44,13 +44,14 @@ void setup() {
         Serial.print(".");
     }
     Serial.println("\nConnected to WiFi");
-    client.setServer("10.60.45.41",1883);
-    client.setCallback(mqtt_callback_and_handle);
+    pubSubclient.setServer("10.60.45.41",1883);
+    pubSubclient.setCallback(mqtt_callback_and_handle);
 }
 
 void loop() {
-   if (!client.connected()) {
+   if (!pubSubclient.connected()) {
     reconnect();
    }
-   client.loop();
+   pubSubclient.loop();
 }
+

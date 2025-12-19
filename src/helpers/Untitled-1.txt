@@ -1,0 +1,49 @@
+8 total requests in the last 7 days.
+
+[1] 2025-12-17T16:15:46.375Z copilot/gpt-5-mini
+  Request:
+    user     : The device "hall_light" was not found or has no pin. Available devices: ['Hall_Light', 'Kitchen_Fridge']. Please return ONLY the correct device name as a single word based on the user intention.
+  Response:
+    Hall_Light
+
+[2] 2025-12-17T16:02:30.875Z copilot/gpt-5-mini
+  Request:
+    user     : The device "hall_light" was not found or has no pin. Available devices: ['Hall_Light', 'Kitchen_Fridge']. Please return ONLY the correct device name as a single word based on the user intention.
+  Response:
+    Hall_Light
+
+[3] 2025-12-17T15:53:49.182Z copilot/gpt-5-mini
+  Request:
+    user     : The device "hall_light" was not found or has no pin. Available devices: ['Hall_Light', 'Kitchen_Fridge']. Please return ONLY the correct device name as a single word based on the user intention.
+  Response:
+    Hall_Light
+
+[4] 2025-12-17T15:50:34.152Z copilot/gpt-5-mini
+  Request:
+    user     : The device "hall_light" was not found or has no pin. Available devices: ['Hall_Light', 'Kitchen_Fridge']. Please return ONLY the correct device name as a single word based on the user intention.
+  Response:
+    Hall_Light
+
+[5] 2025-12-17T15:45:54.504Z copilot/gpt-5-mini
+  Request:
+    user     : The device "hall_light" was not found or has no pin. Available devices: ['Hall_Light', 'Kitchen_Fridge']. Please return ONLY the correct device name as a single word based on the user intention.
+  Response:
+    Hall_Light
+
+[6] 2025-12-17T15:44:39.304Z copilot/gpt-5-mini
+  Request:
+    user     : The device "hall_light" was not found or has no pin. Available devices: ['Hall_Light', 'Kitchen_Fridge']. Please return ONLY the correct device name as a single word based on the user intention.
+  Response:
+    Hall_Light
+
+[7] 2025-12-17T15:39:40.023Z copilot/gpt-5-mini
+  Request:
+    user     : The device "hall_light" was not found or has no pin. Available devices: ['Hall_Light', 'Kitchen_Fridge']. Please return ONLY the correct device name as a single word based on the user intention.
+  Response:
+    Hall_Light
+
+[8] 2025-12-17T15:37:54.706Z copilot/gpt-5-mini
+  Request:
+    user     : The device "hall_light" was not found or has no pin. Available devices: ['Hall_Light', 'Kitchen_Fridge']. Please return ONLY the correct device name as a single word based on the user intention.
+  Response:
+    Hall_Light

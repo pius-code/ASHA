@@ -215,3 +215,7 @@ It’s:
 </p>
 
 ---
+
+[ ] Add PWM support.
+[ ] currently the LLM will publish to "home" topic... but what if i want to turn of the light in the bedroom instead of hall... This generic approach fall shot. Solution can be simple as this: have a SSOT (single source of truth) file that maps the pins to their locations(what could go wrong?)
+[ ] When a user says something like "turn on the light" we should have a simple way of knowing where the user is located (so we can turn on the light in that room)... maybe use bluetooth beacons or wifi triangulation?

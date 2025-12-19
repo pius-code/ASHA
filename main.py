@@ -1,4 +1,4 @@
-from src.core.mcp_server import mcp
+from src.core.mcp_server import *
 from src.helpers.tools import *
 
 

@@ -1,13 +1,13 @@
 #include  "../core/mqtt_callback.h"
 
 void handleResponse(MqttMessage mqttmessage){
-    if(mqttmessage.topic == "home/led"){
-        if (mqttmessage.payload == "on"){
-            Serial.println("Turning LED ON");
-            digitalWrite(23,HIGH);
-        } else {
-            Serial.println("Turning LED OFF");
-            digitalWrite(23,LOW);
-        }
+    Serial.println("In here");
+    if(mqttmessage.topic == "home"){
+        Serial.println("Handling control message");
+        Serial.println("Pin: " + mqttmessage.pin );
+        Serial.println("Command: " + mqttmessage.command);
+    digitalWrite(mqttmessage.pin,mqttmessage.command);
+    } else if(mqttmessage.topic == "home/status"){
+        digitalRead(mqttmessage.pin);
     }
 }
